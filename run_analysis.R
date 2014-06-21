@@ -53,6 +53,6 @@ tidy_data_mean <- dcast(melt, subject + activity ~ variable, mean)
 # Save the tidy data table on file
 message("Exporting data sets to files...")
 write.table(tidy_data, file = "./TidyData.txt")
-write.table(tidy_data_mean, file = "./TidyDataMean1.txt")
+write.table(tidy_data_mean, file = "./TidyDataMean.txt")
 
 message("Tidy data sets exported.")
