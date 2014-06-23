@@ -4,7 +4,7 @@ Source:
 
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - UniversitÃ  degli Studi di Genova, Genoa I-16145, Italy.
+DITEN - Universitï¿½  degli Studi di Genova, Genoa I-16145, Italy.
 activityrecognition '@' smartlab.ws
 www.smartlab.ws
 
@@ -26,11 +26,14 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
  The attached R script called run_analysis.R does the following tasks:
 
-    - Merges the training and the test sets to create one data set.
-    - Extracts only the measurements on the mean and standard deviation for each measurement. 
-    - Uses descriptive activity names to name the activities in the data set
-    - Appropriately labels the data set with descriptive variable names. 
-    - Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+- Sets the environment for R by loading the necessary packages
+- Loads the tables from test and training data sets
+- Extracts only the measurements on the mean and standard deviation for each measurement using grepl() function
+- Uses descriptive activity names to name the activities in the test and training data sets
+- Appropriately labels the data set with descriptive variable names
+- Merges the training and the test sets to create one data set namely tidy_data using cbind() and rbind() function
+- Reshapes tidy_data using melt() and dcast() functions to create the required data set named tidy_data_mean
+- Writes the data set file to the working directory (TidyDataMean).
 
 ## Further Requirements
 
